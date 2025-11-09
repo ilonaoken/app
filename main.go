@@ -1,10 +1,11 @@
 package main
 
 import (
-	"app/calendar"
-	"app/events"
 	"fmt"
 	"time"
+
+	"github.com/ilonaoken/app/calendar"
+	"github.com/ilonaoken/app/events"
 )
 
 func main() {

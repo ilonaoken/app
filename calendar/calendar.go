@@ -1,8 +1,9 @@
 package calendar
 
 import (
-	"app/events"
 	"fmt"
+
+	"github.com/ilonaoken/app/events"
 )
 
 var eventsMap = make(map[string]events.Event)
