@@ -1,19 +1,17 @@
 package main
 
 import (
-	"fmt"
-
-	"github.com/ilonaoken/app/calendar"
-	"github.com/ilonaoken/app/events"
+	"github.com/ilonaoken/app/chooseAction"
+	"github.com/ilonaoken/app/keyboard"
 )
 
 func main() {
-	e, err := events.NewEvent("dentist", "2025-02-12 09:30")
-	if err != nil {
-		fmt.Println(err)
-		return
+	for {
+		title, date, action := keyboard.GetEvent()
+		if action == "close" {
+			break
+		}
+		chooseAction.ChooseAction(action, title, date)
+
 	}
-	calendar.AddEvent("event1", e)
-	fmt.Println("Календарь обновлён")
-	calendar.ShowEvent()
 }
